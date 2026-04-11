@@ -1,0 +1,12 @@
+{
+  "name": "lms-monorepo",
+  "version": "1.0.0",
+  "description": "Employee Leave Management System - Integrated Project",
+  "scripts": {
+    "build:prod": "npm install && cd frontend && npm install && npm run build && cd ../backend && npm install && npm rebuild sqlite3 --build-from-source",
+    "start": "cd backend && node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
