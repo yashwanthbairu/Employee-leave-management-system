@@ -27,7 +27,8 @@ CREATE TABLE IF NOT EXISTS Leave_Balance (
     leave_type_id INTEGER,
     used_leaves INTEGER DEFAULT 0,
     FOREIGN KEY (employee_id) REFERENCES Employee(employee_id) ON DELETE CASCADE,
-    FOREIGN KEY (leave_type_id) REFERENCES Leave_Type(leave_type_id) ON DELETE CASCADE
+    FOREIGN KEY (leave_type_id) REFERENCES Leave_Type(leave_type_id) ON DELETE CASCADE,
+    UNIQUE(employee_id, leave_type_id)
 );
 
 CREATE TABLE IF NOT EXISTS Leave_Application (
